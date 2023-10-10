@@ -15,10 +15,16 @@ router.get("/", async (req, res) => {
 
 // Ruta para crear un nuevo empleado
 router.post("/", async (req, res) => {
-  const { name, position, office, salary } = req.body;
+  const { name, position, office, salary, remote } = req.body; // Añade el campo 'remote' si es necesario
 
   try {
-    const nuevoEmpleado = new Empleado({ name, position, office, salary });
+    const nuevoEmpleado = new Empleado({
+      name,
+      position,
+      office,
+      salary,
+      remote,
+    });
     await nuevoEmpleado.save();
     res.status(201).json(nuevoEmpleado);
   } catch (error) {
@@ -30,12 +36,12 @@ router.post("/", async (req, res) => {
 // Ruta para actualizar un empleado por su ID
 router.put("/:id", async (req, res) => {
   const { id } = req.params;
-  const { name, position, office, salary } = req.body;
+  const { name, position, office, salary, remote } = req.body; // Añade el campo 'remote' si es necesario
 
   try {
     const empleado = await Empleado.findByIdAndUpdate(
       id,
-      { name, position, office, salary },
+      { name, position, office, salary, remote },
       { new: true }
     );
 

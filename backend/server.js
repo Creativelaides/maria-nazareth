@@ -28,7 +28,7 @@ const empleadosRoutes = require('./empleadoRoutes');
 app.use('/api/empleados', empleadosRoutes);
 
 app.listen(port, () => {
-  console.log(`Servidor backend escuchando en el puerto ${port}`);
+  console.log(`Servidor backend se esta escuchando en el puerto: http://localhost:${port}`);
 });
 
 
