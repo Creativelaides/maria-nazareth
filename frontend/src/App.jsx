@@ -1,19 +1,13 @@
-// App.js
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { ThemeProvider } from './ThemeContext'; // Importa el proveedor de temas
-import Navegacion from './Navegacion';
-import AppRoutes from './Routes';
+import axios from "axios";
+import AppRoutes from "./routes/Routes";
 
-const App = () => {
+// Configura la base de la URL de Axios
+axios.defaults.baseURL = "http://localhost:5000/api"; // Cambia la URL según tu configuración
+
+function App() {
   return (
-    <Router>
-      <ThemeProvider> {/* Envuelve tu aplicación con el proveedor de temas */}
-        <Navegacion />
-        <AppRoutes />
-      </ThemeProvider>
-    </Router>
+    <AppRoutes/>
   );
-};
+}
 
 export default App;
