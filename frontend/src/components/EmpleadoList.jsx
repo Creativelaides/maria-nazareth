@@ -16,7 +16,7 @@ function EmpleadoList() {
             position: empleado.position,
             office: empleado.office,
             salary: empleado.salary,
-            remote: empleado.remote, // Añade el campo 'remote' si es necesario
+            // remote: empleado.remote, // Añade el campo 'remote' si es necesario
           };
         });
         setEmpleados(empleadosTransformados);
@@ -55,9 +55,9 @@ function EmpleadoList() {
                 <th className="px-6 py-3 bg-secondary text-left text-s leading-4 font-medium text-slate-800 uppercase tracking-wider">
                   Salario
                 </th>
-                <th className="px-6 py-3 bg-secondary text-left text-s leading-4 font-medium text-slate-800 uppercase tracking-wider">
+                {/* <th className="px-6 py-3 bg-secondary text-left text-s leading-4 font-medium text-slate-800 uppercase tracking-wider">
                   Remoto
-                </th>
+                </th> */}
               </tr>
             </thead>
             <tbody>
@@ -78,9 +78,9 @@ function EmpleadoList() {
                   <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                     ${empleado.salary}
                   </td>
-                  <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                  {/* <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                     {empleado.remote ? "Sí" : "No"}
-                  </td>
+                  </td> */}
                 </tr>
               ))}
             </tbody>

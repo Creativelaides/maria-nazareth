@@ -8,7 +8,7 @@ const EmpleadoUpdate = () => {
   const [cargo, setCargo] = useState("");
   const [oficina, setOficina] = useState("");
   const [salario, setSalario] = useState("");
-  const [remote, setRemote] = useState(false);
+  // const [remote, setRemote] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const EmpleadoUpdate = () => {
     setCargo(empleado.position);
     setOficina(empleado.office);
     setSalario(empleado.salary);
-    setRemote(empleado.remote);
+    // setRemote(empleado.remote);
     setModalIsOpen(true);
   };
 
@@ -42,7 +42,7 @@ const EmpleadoUpdate = () => {
           position: cargo,
           office: oficina,
           salary: salario,
-          remote: remote,
+          // remote: remote,
         });
 
         if (response.status === 200) {
@@ -147,7 +147,7 @@ const EmpleadoUpdate = () => {
                 required
               />
             </div>
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label
                 htmlFor="remote"
                 className="block text-sm font-medium text-gray-700"
@@ -161,7 +161,7 @@ const EmpleadoUpdate = () => {
                 checked={remote}
                 onChange={(e) => setRemote(e.target.checked)}
               />
-            </div>
+            </div> */}
             <button
               type="submit"
               className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg w-full"

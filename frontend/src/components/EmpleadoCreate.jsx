@@ -9,7 +9,7 @@ const EmpleadoCreate = () => {
   const [cargo, setCargo] = useState("");
   const [oficina, setOficina] = useState("");
   const [salario, setSalario] = useState("");
-  const [remote, setRemote] = useState(false); // Inicializar con false
+  // const [remote, setRemote] = useState(false); // Inicializar con false
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -21,7 +21,7 @@ const EmpleadoCreate = () => {
         position: cargo,
         office: oficina,
         salary: salario,
-        remote: remote, // Establecer el valor de 'remote' correctamente
+        // remote: remote, // Establecer el valor de 'remote' correctamente
       });
 
       if (response.status === 201) {
@@ -101,7 +101,7 @@ const EmpleadoCreate = () => {
             />
           </div>
           {/* Campo 'remote' */}
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label
               htmlFor="remote"
               className="block text-sm font-medium text-gray-700"
@@ -115,7 +115,7 @@ const EmpleadoCreate = () => {
               checked={remote} // Utiliza el estado 'remote' para el valor checked
               onChange={(e) => setRemote(e.target.checked)} // Actualiza 'remote' con el valor del checkbox
             />
-          </div>
+          </div> */}
           <button
             type="submit"
             className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg w-full"
